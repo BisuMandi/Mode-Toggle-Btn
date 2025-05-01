@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #faf9f6;
+    transition: background-color 0.3s ease;
+}
+
+body.dark {
+    /* background-color: rgb(27, 23, 78); */
+    background-color: rgb(54 50 106);
+}
+
+.all {
+    /* text-align: center; */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* min-height: 100vh; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px; */
+    /* color: white; */
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    /* background-color: #0880ca; */
+    background-color: #4e7bc4;
+    width: 58px;
+    height: 28px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    align-items: center;
+}
+
+#day {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    opacity: 1;
+    /* border: 1px solid white; */
+    transition: opacity 0.3s ease-in;
+}
+
+#day #day-first {
+    color: white;
+    font-size: 4px;
+    position: absolute;
+    top: 12px;
+    left: 8px;
+}
+
+#day #day-second {
+    color: white;
+    font-size: 7px;
+    position: absolute;
+    top: 3px;
+    right: 6px;
+}
+
+#night {
+    position: relative;
+    /* position: absolute; */
+    width: 30px;
+    height: 30px;
+    opacity: 0;
+    /* border: 1px solid white; */
+    transition: opacity 0.5s ease-in;
+}
+
+#night #night-first {
+    color: white;
+    font-size: 7px;
+    position: absolute;
+    top: 4px;
+    left: 6px;
+}
+
+#night #night-second {
+    color: white;
+    font-size: 5px;
+    position: absolute;
+    bottom: 4px;
+    right: 1.5px;
+}
+
+#night #night-third {
+    color: white;
+    font-size: 2px;
+    position: absolute;
+    bottom: 10px;
+    left: 4px;
+}
+
+#night #night-fourth {
+    color: white;
+    font-size: 3px;
+    position: absolute;
+    top: 12px;
+    right: 5px;
+}
+
+#night #night-fifth {
+    color: white;
+    font-size: 3px;
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+
+.checkbox-label .toggle-mode {
+    /* background-color: #fff; */
+    /* width: 26px;
+    height: 26px; */
+    position: absolute;
+    left: 6.5px;
+    top: 5.5px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox-label #toggle-icon {
+    color: white;
+    font-size: 26px;
+    position: absolute;
+    top: 1px;
+}
+
+.texts {
+    /* padding: 10px; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    /* letter-spacing: 1px; */
+}
+
+#light-text {
+    color: black;
+}
+
+#dark-text {
+    color: grey;
+}
+
+body.dark #light-text {
+    color: grey;
+}
+
+body.dark #dark-text {
+    color: white;
+}
+
+.checkbox:checked~.checkbox-label .toggle-mode {
+    transform: translateX(33px);
+}
+
+.checkbox:checked~.checkbox-label {
+    /* background-color: rgb(16, 28, 79); */
+    background-color: rgb(4, 12, 46);
+}
